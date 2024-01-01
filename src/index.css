@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background-color: #242424;
+}
+
+#app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  padding: 2vmin;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  gap: 5vmin;
+  border-radius: 10px;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: 2vmin;
+  text-align: center;
+}
+
+.screen input {
+  width: 17vw;
+  background: rgba(255, 255, 255, 0.25);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 1vmin;
+}
+
+.screen input:focus {
+  /* border: none; */
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2vmin;
+}
+
+.buttons button {
+  color: black;
+  padding: 1.5vmin;
+  font-weight: 600;
+  transition: all 0.2s;
+  background-color: lavender;
+  border: none;
+  border-radius: 5px;
+  font-size: 2vmin;
+}
+
+.buttons button:hover {
+  background-color: rgb(178, 176, 176);
+  transform: scale(1.1);
+  cursor: pointer;
+}
